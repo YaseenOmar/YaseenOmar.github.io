@@ -73,10 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
      ========================================================================== */
   const typingTextElement = document.getElementById("typing-text");
   const roles = [
-    "Flutter Developer",
-    "Android Developer",
     "Software Engineer",
-    "Mobile Application Developer"
+    "Mobile App Developer"
   ];
   
   let roleIndex = 0;
