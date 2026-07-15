@@ -1,0 +1,10 @@
+# robots.txt for https://yaseenomar.github.io/
+
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yaseenomar.github.io/
+
+# Sitemap
+Sitemap: https://yaseenomar.github.io/sitemap.xml

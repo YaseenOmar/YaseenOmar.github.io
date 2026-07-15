@@ -1,0 +1,11 @@
+Place your portfolio screenshots in this folder with the following filenames to enable visual previews:
+
+1. profile-placeholder.webp      - Your professional avatar square photo.
+2. project-cashiri.webp           - Cashiri point of sale screenshot.
+3. project-weather.webp           - Weather app screen screenshot.
+4. project-athkar.webp            - Athkar remembrance screen screenshot.
+5. project-electricity.webp       - Electricity meter reading screenshot.
+6. project-paging.webp            - Jetpack paging demo screenshot.
+7. social-preview.webp            - Main card image used for social share link embeds.
+
+If these webp files are missing, the website will automatically hide broken image icons and fall back to custom CSS gradients.
