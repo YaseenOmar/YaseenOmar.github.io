@@ -1244,6 +1244,45 @@ html[data-theme="light"] .theme-icon-moon { opacity: 1; transform: rotate(0) sca
   box-shadow: var(--shadow-glow);
 }
 
+.awj-project-image {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  background: var(--bg-card-elevated);
+}
+
+.project-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-status-coming {
+  background-color: var(--header-bg);
+  color: var(--color-primary);
+}
+
+.ev-project-image {
+  background: #071729;
+}
+
+.project-role {
+  margin: -4px 0 20px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--color-secondary);
+  background: var(--bg-card-elevated);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.project-role strong {
+  color: var(--text-primary);
+}
+
 .project-image-container {
   height: 200px;
   overflow: hidden;
