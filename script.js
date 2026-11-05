@@ -6,9 +6,33 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ==========================================================================
+     1. COLOR THEME
+     ========================================================================== */
+  const themeToggle = document.querySelector(".theme-toggle");
+  const root = document.documentElement;
+
+  const updateThemeToggle = () => {
+    if (!themeToggle) return;
+    const isLight = root.dataset.theme === "light";
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+    themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+  };
+
+  updateThemeToggle();
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+      root.dataset.theme = nextTheme;
+      localStorage.setItem("portfolio-theme", nextTheme);
+      updateThemeToggle();
+    });
+  }
   
   /* ==========================================================================
-     1. AUTOMATIC COPYRIGHT YEAR
+     2. AUTOMATIC COPYRIGHT YEAR
      ========================================================================== */
   const yearSpan = document.getElementById("current-year");
   if (yearSpan) {
