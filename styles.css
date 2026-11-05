@@ -1658,6 +1658,48 @@ a.info-value:hover {
   padding: 30px;
 }
 
+.whatsapp-contact-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+
+.whatsapp-mark {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--bg-card-elevated);
+  color: #25d366;
+}
+
+.whatsapp-mark svg {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-contact-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.7rem;
+}
+
+.whatsapp-contact-card p {
+  max-width: 430px;
+}
+
+.whatsapp-contact-button {
+  gap: 10px;
+  margin-top: 8px;
+}
+
 @media (min-width: 768px) {
   .contact-form-container {
     padding: 40px;
