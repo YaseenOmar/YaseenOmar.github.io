@@ -1671,19 +1671,27 @@ a.info-value:hover {
 }
 
 .whatsapp-mark {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   display: grid;
   place-items: center;
   margin-bottom: 24px;
   border-radius: 50%;
-  background: var(--bg-card-elevated);
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.28);
   color: #25d366;
+  box-shadow: 0 0 24px rgba(37, 211, 102, 0.18);
+  transition: all var(--transition-normal);
+}
+
+.whatsapp-contact-card:hover .whatsapp-mark {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp-mark svg {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 
 .whatsapp-contact-card h3 {
