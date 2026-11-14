@@ -1,5 +1,15 @@
 /** Arabic copy keyed by the original English text; product and technology names stay unchanged. */
 window.portfolioArabic = {
+  "Mobile development and training showcase": "واجهة لعرض تطوير تطبيقات الموبايل والتدريب",
+  "Developer space": "مساحة المطوّر",
+  "Meet your developer": "تعرّف على مطوّرك",
+  "Developer & Mentor": "مطوّر ومرشد تقني",
+  "From idea to app": "من فكرة إلى تطبيق",
+  "Flutter code example": "مثال على كود Flutter",
+  "Learn. Build. Grow.": "تعلّم. طوّر. تقدّم.",
+  "Flutter training & mentorship": "تدريب وإرشاد في Flutter",
+  "Showcase shortcuts": "روابط واجهة التطبيق",
+  "Training": "التدريب",
   "Skip to main content": "انتقل إلى المحتوى الرئيسي",
   "Eng.": "م.",
   "Yaseen Zaqut": "ياسين زقوت",

@@ -198,68 +198,48 @@
         </div>
 
         <div class="hero-visual reveal-item">
-          <!-- Smartphone Showcase Mockup -->
-          <div class="phone-mockup" hidden>
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-status-bar">
-                <span class="phone-time">13:09</span>
-                <div class="phone-icons">
-                  <svg class="mini-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.64 10.47 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
-                  <svg class="mini-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
-                </div>
-              </div>
-              
-              <!-- Graphic Representation of Mobile App Interface -->
-              <div class="app-ui">
-                <div class="app-header">
-                  <div class="app-avatar-placeholder">YZ</div>
-                  <div class="app-title-container">
-                    <span class="app-title">CleanArchitectureApp</span>
-                    <span class="app-subtitle">Active Session</span>
-                  </div>
-                </div>
-                
-                <div class="app-card-wrapper">
-                  <div class="app-metric-card">
-                    <span class="metric-label">UI Layer (Presentation)</span>
-                    <div class="metric-progress-track">
-                      <div class="metric-progress-fill" style="width: 85%;"></div>
-                    </div>
-                    <span class="metric-desc">Jetpack Compose / Flutter UI</span>
-                  </div>
-
-                  <div class="app-metric-card">
-                    <span class="metric-label">Domain Layer (Business Logic)</span>
-                    <div class="metric-progress-track">
-                      <div class="metric-progress-fill" style="width: 100%;"></div>
-                    </div>
-                    <span class="metric-desc">Entities, Use Cases, Repositories</span>
-                  </div>
-
-                  <div class="app-metric-card">
-                    <span class="metric-label">Data Layer (Data Source)</span>
-                    <div class="metric-progress-track">
-                      <div class="metric-progress-fill" style="width: 90%;"></div>
-                    </div>
-                    <span class="metric-desc">Room, SQLite, Retrofit, Ktor</span>
-                  </div>
-                </div>
-                
-                <div class="app-footer-bar">
-                  <div class="app-footer-dot active"></div>
-                  <div class="app-footer-dot"></div>
-                  <div class="app-footer-dot"></div>
-                </div>
-              </div>
+          <div class="dev-phone" aria-label="Mobile development and training showcase">
+            <div class="dev-phone-camera" aria-hidden="true"></div>
+            <div class="dev-status" aria-hidden="true">
+              <span>9:41</span>
+              <svg viewBox="0 0 56 16" fill="currentColor"><path d="M1 12h3v3H1zm5-4h3v7H6zm5-4h3v11h-3zm5-3h3v14h-3z"/><rect x="28" y="3" width="23" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="31" y="6" width="16" height="5" rx="1"/><path d="M53 6h2v5h-2z"/></svg>
             </div>
-          </div>
-          
-          <!-- Profile Photo Backdrop with CSS Glow -->
-          <div class="profile-glow-backdrop"></div>
-
-          <div class="profile-image-container">
-            <img src="assets/images/profile-photo.jpeg" alt="Yaseen Zaqut Portrait" class="profile-image" loading="eager">
+            <div class="dev-app-header">
+              <span class="dev-app-logo" aria-hidden="true">y<span>.</span></span>
+              <span>Developer space</span>
+              <span class="dev-app-indicator" aria-hidden="true"></span>
+            </div>
+            <div class="dev-profile">
+              <div class="dev-profile-copy">
+                <span class="dev-eyebrow">Meet your developer</span>
+                <h2>Yaseen Zaqut</h2>
+                <p>Developer &amp; Mentor</p>
+                <span class="dev-flutter-tag"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14 2 3 13l3.5 3.5L21 2zM14 12l-6 6 3.5 3.5L21 12z"/><path d="m11.5 21.5 2.5 2.5h7L15 18z" opacity=".55"/></svg>Flutter</span>
+              </div>
+              <img src="assets/images/profile-photo.jpeg" alt="Yaseen Zaqut Portrait" class="dev-portrait" width="128" height="172" loading="eager">
+            </div>
+            <div class="dev-workspace">
+              <div class="dev-card-heading"><span>From idea to app</span><span class="dev-code-symbol" aria-hidden="true">&lt;/&gt;</span></div>
+              <div class="dev-editor" dir="ltr" aria-label="Flutter code example">
+                <div class="dev-editor-tab"><span class="dev-file-dot"></span> main.dart <span>Flutter</span></div>
+                <pre><code><span class="dev-code-purple">class</span> <span class="dev-code-lime">MyApp</span> <span class="dev-code-purple">extends</span> StatelessWidget {
+  <span class="dev-code-purple">Widget</span> build(context) =&gt;
+    <span class="dev-code-lime">MaterialApp</span>(home: <span class="dev-code-gold">YourIdea</span>());
+}</code></pre>
+              </div>
+              <div class="dev-stack"><span>Dart</span><span>Clean Architecture</span><span>Firebase</span></div>
+            </div>
+            <a class="dev-training" href="#experience">
+              <span class="dev-training-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 9 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6M22 9v7"/></svg></span>
+              <span class="dev-training-copy"><strong>Learn. Build. Grow.</strong><span>Flutter training &amp; mentorship</span></span>
+              <span class="dev-training-arrow" aria-hidden="true">↗</span>
+            </a>
+            <nav class="dev-bottom-nav" aria-label="Showcase shortcuts">
+              <a href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Projects</span></a>
+              <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h6a4 4 0 0 1 3 2 4 4 0 0 1 3-2h6v15h-6a4 4 0 0 0-3 2 4 4 0 0 0-3-2H3zM12 6v15"/></svg><span>Training</span></a>
+              <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11a8 8 0 0 1-8 8H7l-4 3V11a9 9 0 0 1 18 0Z"/><path d="M7 10h10M7 14h6"/></svg><span>Contact</span></a>
+            </nav>
+            <div class="dev-home-indicator" aria-hidden="true"></div>
           </div>
         </div>
       </div>
