@@ -140,3 +140,9 @@ All styling parameters are driven by CSS Variables defined at the top of [styles
 
 ## 📄 License
 This project is open-source. Feel free to copy, modify, and style it as your own personal portfolio.
+
+## Languages
+
+The header language button switches between English and Arabic, including right-to-left layout, accessible labels, and the animated job title. The selected language is saved locally; English is the default for a first visit. The CV download uses the same supplied PDF in both languages.
+
+Arabic text is maintained in `translations.js`, keyed by the normalized English text in `index.html`. When changing English copy, update its translation key as well. `language.js` preserves the original text nodes, links, and icons when switching languages. Hidden legacy templates are not translated.

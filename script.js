@@ -17,9 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!themeToggle) return;
     const isLight = root.dataset.theme === "light";
     themeToggle.setAttribute("aria-pressed", String(isLight));
-    themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+    themeToggle.setAttribute("aria-label", root.lang === "ar"
+      ? (isLight ? "التبديل إلى الوضع الداكن" : "التبديل إلى الوضع الفاتح")
+      : (isLight ? "Switch to dark theme" : "Switch to light theme"));
   };
 
+  document.addEventListener("languagechange", updateThemeToggle);
   updateThemeToggle();
 
   if (themeToggle) {
@@ -96,10 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
      4. HERO TYPING ANIMATION
      ========================================================================== */
   const typingTextElement = document.getElementById("typing-text");
-  const roles = [
-    "Software Engineer",
-    "Mobile App Developer"
-  ];
+  const getRoles = () => root.lang === "ar"
+    ? ["مهندس برمجيات", "مطوّر تطبيقات موبايل"]
+    : ["Software Engineer", "Mobile App Developer"];
   
   let roleIndex = 0;
   let charIndex = 0;
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const typeEffect = () => {
     if (!typingTextElement) return;
 
+    const roles = getRoles();
     const currentRole = roles[roleIndex];
     
     if (isDeleting) {
@@ -143,8 +146,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!motionQuery.matches) {
     typeEffect();
   } else if (typingTextElement) {
-    typingTextElement.textContent = roles[0];
+    typingTextElement.textContent = getRoles()[0];
   }
+
+  document.addEventListener("languagechange", () => {
+    clearTimeout(typingTimeout);
+    roleIndex = 0;
+    charIndex = 0;
+    isDeleting = false;
+    if (motionQuery.matches) {
+      if (typingTextElement) typingTextElement.textContent = getRoles()[0];
+    } else {
+      typeEffect();
+    }
+  });
 
   /* ==========================================================================
      5. INTERSECTION OBSERVER FOR ACTIVE NAV SECTIONS

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
   <!-- Google Fonts: Inter & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -113,6 +113,8 @@
       <div class="header-cta">
         <a href="#contact" class="btn btn-primary btn-sm">Let’s Work Together</a>
       </div>
+
+      <button class="language-toggle" type="button" lang="ar" aria-label="التبديل إلى العربية">العربية</button>
 
       <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
         <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -1212,6 +1214,8 @@
   </footer>
 
   <!-- Script -->
+  <script src="translations.js" defer></script>
+  <script src="language.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

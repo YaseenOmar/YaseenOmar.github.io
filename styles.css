@@ -615,14 +615,14 @@ html[data-theme="light"] .theme-icon-moon { opacity: 1; transform: rotate(0) sca
 
 .hero-dynamic-title {
   color: var(--color-primary);
-  margin-left: 6px;
+  margin-inline-start: 6px;
 }
 
 .typing-cursor {
   font-weight: 400;
   color: var(--color-secondary);
   animation: blink 0.8s infinite;
-  margin-left: 2px;
+  margin-inline-start: 2px;
 }
 
 .hero-description {
@@ -2078,4 +2078,63 @@ a.info-value:hover {
     transform: none !important;
     box-shadow: none !important;
   }
+}
+
+/* Bilingual navigation and logical layout for Arabic. */
+.language-toggle {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font: 600 0.85rem 'Noto Sans Arabic', var(--font-primary);
+  cursor: pointer;
+}
+.language-toggle:hover { border-color: var(--color-primary); }
+.header-container { gap: 12px; }
+html[lang="ar"] {
+  --font-primary: 'Noto Sans Arabic', system-ui, sans-serif;
+  --font-display: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+html[lang="ar"] body { line-height: 1.85; }
+html[lang="ar"] .hero-title { letter-spacing: 0; }
+html[lang="ar"] .hero-content,
+html[lang="ar"] th { text-align: right; }
+html[lang="ar"] .section-subtitle,
+html[lang="ar"] .hero-tagline,
+html[lang="ar"] .footer-heading { letter-spacing: 0; }
+html[dir="rtl"] .timeline-container { padding-left: 0; padding-right: 30px; }
+html[dir="rtl"] .timeline-container::before { left: auto; right: 10px; }
+html[dir="rtl"] .timeline-dot { left: auto; right: -25px; }
+html[dir="rtl"] .timeline-list li { padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .timeline-list li::before { left: auto; right: 0; content: '◃'; }
+html[dir="rtl"] .learning-timeline-item {
+  border-left: 0;
+  border-right: 2px solid rgba(139, 92, 246, 0.15);
+  padding-left: 0;
+  padding-right: 15px;
+  margin-left: 0;
+  margin-right: -15px;
+}
+html[dir="rtl"] .project-role {
+  border-left: 0;
+  border-right: 2px solid var(--color-secondary);
+}
+.skill-badge, .stat-number, .timeline-date:not(.status-tag), a.info-value {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+html[lang="ar"] .timeline-date { text-align: right; }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header-cta { display: none; }
+}
+@media (max-width: 639px) {
+  .header-container { gap: 8px; }
+  .logo-link { gap: 8px; }
+  .logo-name { font-size: 0.85rem; }
+  .language-toggle { padding: 6px 8px; font-size: 0.8rem; }
+  .theme-toggle { flex-shrink: 0; }
+  html[lang="ar"] .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
 }
